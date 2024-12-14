@@ -15,8 +15,12 @@
       "flags": {}
     }
   ],
-  "esmodules": ["scripts/poryphone.js"],
-  "styles": ["styles/poryphone.css"],
+  "esmodules": ["scripts/poryphone.mjs"],
+  "styles": [
+    "styles/poryphone.css",
+    "styles/poryphone-bar.css",
+    "styles/poryphone-dialog.css"
+  ],
   "languages": [
     {
       "lang": "en",

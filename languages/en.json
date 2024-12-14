@@ -1,5 +1,12 @@
 {
-    "PORYPHONE": {
-        
+  "PORYPHONE": {
+    "TITLE": "Poryphone",
+    "SETTINGS": {
+      "DEBUG.NAME": "Debug mode",
+      "DEBUG.HINT": "Activate debug mode for developers."
+    },
+    "BAR": {
+      "TITLE": "PoryphoneBar"
     }
+  }
 }

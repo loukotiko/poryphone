@@ -1,0 +1,10 @@
+#poryphone-dialog .window-header {
+  background: red;
+}
+
+#poryphone-dialog .window-content {
+  background: #e5f3f6;
+  color: #8dacc0;
+  font-family: Oxanium, monospace;
+  font-weight: 600;
+}
