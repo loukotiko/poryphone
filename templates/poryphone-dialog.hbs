@@ -1,12 +1,29 @@
 <div class="dialog-container">
 
-  <div class="poryapps">
-    {{#each apps}}
-      <button class="poryapp">
-        <div class="app-icon"><i class="fas fa-{{icon}}"></i></div>
-        <div class="app-title">{{title}}</div>
-      </button>
-    {{/each}}
+  <div class="poryapp-content" id="app-home">
+    <div class="poryapps">
+      {{#each apps}}
+        <button class="poryapp">
+          <div class="outline">
+            <div class="app-icon"><i class="fas fa-{{icon}}"></i></div>
+            <div class="app-title">{{title}}</div>
+          </div>
+        </button>
+      {{/each}}
+    </div>
   </div>
+
+  {{#each apps}}
+    <div class="poryapp-content hidden" id="{{id}}">
+      <div class="poryheader hidden">
+        <button>Back</button>
+        <div class="poryheader-title">
+          <i class="fas fa-{{icon}}"></i>
+          {{title}}
+        </div>
+      </div>
+
+    </div>
+  {{/each}}
 
 </div>

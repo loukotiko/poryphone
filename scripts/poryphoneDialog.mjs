@@ -11,6 +11,7 @@ export default class PoryphoneDialog extends FormApplication {
       template: Poryphone.TEMPLATES.DIALOG,
       title: "PORYPHONE.TITLE",
       userId: game.userId,
+      popOut: true, // Render my own container if I want to
     };
 
     return foundry.utils.mergeObject(defaults, overrides);
@@ -18,27 +19,33 @@ export default class PoryphoneDialog extends FormApplication {
   getData(options) {
     const scannerApp = {
       title: "Pokéscan",
-      icon: "binoculars",
+      icon: "magnifying-glass",
+      id: "scanner",
     };
     const pokedexApp = {
       title: "Pokédex",
       icon: "address-book",
+      id: "pokedex",
     };
     const teamApp = {
-      title: "Ma team",
-      icon: "users",
+      title: "Équipe",
+      icon: "paw",
+      id: "team",
     };
     const meApp = {
-      title: "Mes stats",
-      icon: "circle-user",
+      title: "Profil",
+      icon: "address-card",
+      id: "me",
     };
     const bagApp = {
-      title: "Mon sac",
+      title: "Sac",
       icon: "bag-shopping",
+      id: "bag",
     };
     const settingsApp = {
       title: "Options",
       icon: "cog",
+      id: "settings",
     };
     return {
       apps: [meApp, teamApp, bagApp, scannerApp, pokedexApp, settingsApp],
