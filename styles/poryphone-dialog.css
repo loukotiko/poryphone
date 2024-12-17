@@ -41,7 +41,7 @@
   margin-top: 10px;
   border-radius: 30px;
   padding: 4px;
-  transform: skew(0deg, -2deg);
+  transform: skew(0deg, -2.5deg);
   filter: drop-shadow(6px 6px 6px #00000033);
   transition: all 0.3s;
 }
@@ -71,6 +71,19 @@
 
 #poryphone-dialog .poryapp:hover .app-icon {
   transform: translate(3px, -2px);
+}
+
+#poryphone-dialog .poryapp:active {
+  --background: #15adcd;
+  --app-color: #e7f2f5;
+  transition: none;
+  transform: skew(0deg, 0deg) translate(1px, 2px);
+  filter: drop-shadow(0 0 0 #00000033);
+}
+
+#poryphone-dialog .poryapp:active .app-icon {
+  transition: none;
+  transform: translate(2px, -1px);
 }
 
 #poryphone-dialog .poryapp .app-title,
