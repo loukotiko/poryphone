@@ -13,8 +13,7 @@
   display: inline-block;
   top: 50%;
   left: 50%;
-  margin-left: -50%;
-  margin-top: -50%;
+  translate: -50% -50%;
 }
 .pokeball .line {
   scale: 0.5;

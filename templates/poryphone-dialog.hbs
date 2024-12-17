@@ -1,9 +1,12 @@
-<div>
+<div class="dialog-container">
 
-  <i class="fas fa-circle-half-stroke pokeball">
-    <i class="fa-solid fa-circle line"></i>
-    <i class="fa-solid fa-circle bg"></i>
-  </i>
-  Insérer applications ici ({{truc}})
+  <div class="poryapps">
+    {{#each apps}}
+      <button class="poryapp">
+        <div class="app-icon"><i class="fas fa-{{icon}}"></i></div>
+        <div class="app-title">{{title}}</div>
+      </button>
+    {{/each}}
+  </div>
 
 </div>
