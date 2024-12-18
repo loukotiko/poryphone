@@ -4,16 +4,36 @@
 
 #poryphone-dialog .window-content {
   --background: #47c6e1;
-  background: var(--background);
   color: white;
   font-family: Oxanium, monospace;
   font-weight: 600;
+  padding: 0;
 }
 
 #poryphone-dialog .dialog-container {
   height: 100%;
   width: 100%;
+  overflow: hidden;
+  position: relative;
+  background: #15adcd;
+}
+
+#poryphone-dialog .poryapp-content {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
   padding: 20px;
+  transition: all 0.3s;
+  background: var(--background);
+  z-index: 1;
+  filter: drop-shadow(-6px 0 6px #00000033);
+}
+
+#poryphone-dialog .poryapp-content.poryapp-hidden:not(#content-home) {
+  left: 100%;
+  z-index: 0;
 }
 
 #poryphone-dialog .poryapps {
@@ -44,6 +64,9 @@
   transform: skew(0deg, -2.5deg);
   filter: drop-shadow(6px 6px 6px #00000033);
   transition: all 0.3s;
+}
+#poryphone-dialog .poryapp > * {
+  pointer-events: none;
 }
 
 #poryphone-dialog .poryapp .outline {
@@ -110,4 +133,35 @@
   padding: 2px 6px;
   box-sizing: content-box;
   width: 90%;
+}
+
+#poryphone-dialog .poryapp-content .poryheader button {
+  --color: white;
+  background: var(--background);
+  font-family: Oxanium, monospace;
+  font-weight: 600;
+  border: 2px solid var(--color);
+  color: var(--color);
+  border-radius: 30px;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  font-size: 11px;
+  width: fit-content;
+  line-height: 1;
+  transition: all 0.3s;
+  box-shadow: none;
+  filter: drop-shadow(0 0 0 #00000033);
+  transform: translateX(0);
+}
+
+#poryphone-dialog .poryapp-content .poryheader button:hover {
+  transform: translateX(-2px);
+  filter: drop-shadow(2px 0 2px #00000033);
+}
+
+#poryphone-dialog .poryapp-content .poryheader button:active {
+  --background: #15adcd;
+  --color: #e7f2f5;
+  transform: translateX(-2px);
+  filter: drop-shadow(0px 0 0px #00000033);
 }

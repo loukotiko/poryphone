@@ -51,4 +51,20 @@ export default class PoryphoneDialog extends FormApplication {
       apps: [meApp, teamApp, bagApp, scannerApp, pokedexApp, settingsApp],
     };
   }
+
+  activateListeners(html) {
+    let currentAppId = "home";
+    html.on("click", ".poryapp-navigate", (event) => {
+      const target = event.target;
+      const id = target.getAttribute("data-appid");
+      const $targetContent = html.find(".poryapp-content#content-" + id)[0];
+      const $currentContent = html.find(
+        ".poryapp-content#content-" + currentAppId
+      )[0];
+      $currentContent.classList.add("poryapp-hidden");
+      $targetContent.classList.remove("poryapp-hidden");
+
+      currentAppId = id;
+    });
+  }
 }
