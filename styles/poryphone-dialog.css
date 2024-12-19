@@ -81,7 +81,9 @@
 }
 
 #poryphone-dialog .control.close:hover {
-  --poryphone-button-close-background: var(--poryphone-button-close-background);
+  --poryphone-button-close-background: var(
+    --poryphone-button-close-background-hover
+  );
 }
 
 #poryphone-dialog .control.close i {
