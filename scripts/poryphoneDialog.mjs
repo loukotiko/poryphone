@@ -5,7 +5,7 @@ export default class PoryphoneDialog extends FormApplication {
     const defaults = super.defaultOptions;
 
     const overrides = {
-      height: 500,
+      height: 580,
       width: 320,
       id: Poryphone.ID + "-dialog",
       template: Poryphone.TEMPLATES.DIALOG,
