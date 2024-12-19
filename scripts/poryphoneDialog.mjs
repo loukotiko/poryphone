@@ -42,13 +42,38 @@ export default class PoryphoneDialog extends FormApplication {
       icon: "bag-shopping",
       id: "bag",
     };
+    const typesApp = {
+      title: "Types",
+      icon: "fire",
+      id: "types",
+    };
+    const rulesApp = {
+      title: "Règles",
+      icon: "book",
+      id: "rules",
+    };
+    const pcApp = {
+      title: "PC",
+      icon: "computer",
+      id: "pc",
+    };
     const settingsApp = {
       title: "Options",
       icon: "cog",
       id: "settings",
     };
     return {
-      apps: [meApp, teamApp, bagApp, scannerApp, pokedexApp, settingsApp],
+      apps: [
+        meApp,
+        teamApp,
+        bagApp,
+        pcApp,
+        pokedexApp,
+        scannerApp,
+        typesApp,
+        rulesApp,
+        settingsApp,
+      ],
     };
   }
 
