@@ -3,6 +3,7 @@ export function updateDateTime(html) {
   const date = now.toLocaleDateString(undefined, {
     month: "2-digit",
     day: "2-digit",
+    year: "2-digit",
   });
   const time = now.toLocaleTimeString(undefined, {
     hour: "2-digit",
