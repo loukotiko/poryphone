@@ -1,6 +1,6 @@
-import { Poryphone } from "./utils.mjs";
-import { setupSettings } from "./settings.mjs";
-import { PoryphoneBar } from "./poryphoneBar.mjs";
+import { Poryphone } from "./scripts/utils.mjs";
+import { setupSettings } from "./scripts/settings.mjs";
+import { PoryphoneBar } from "./scripts/poryphoneBar.mjs";
 
 Hooks.once("init", async function () {
   await setupSettings();
